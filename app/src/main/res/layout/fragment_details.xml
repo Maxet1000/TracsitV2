@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etStartLocation"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Origin"
+        app:layout_constraintEnd_toStartOf="@+id/tvAtFrom"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvFrom"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventTime" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Update database"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etEndLocation"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:hint="Destination"
+        app:layout_constraintEnd_toStartOf="@+id/tvAtTo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTo"
+        app:layout_constraintTop_toBottomOf="@+id/etStartLocation" />
+
+    <EditText
+        android:id="@+id/etDepartureTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:hint="00h00"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAtFrom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvAtFrom"
+        app:layout_constraintTop_toTopOf="@+id/tvAtFrom" />
+
+    <EditText
+        android:id="@+id/etArrivalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:hint="00h00"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAtTo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvAtTo"
+        app:layout_constraintTop_toTopOf="@+id/tvAtTo" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="title"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Calculate Commute"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEndLocation" />
+
+    <TextView
+        android:id="@+id/tvTravelTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/btnApi"
+        app:layout_constraintStart_toStartOf="@+id/btnApi"
+        app:layout_constraintTop_toBottomOf="@+id/btnApi" />
+
+    <TextView
+        android:id="@+id/tvEventTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="From 20h00 to 21h00"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="From"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etStartLocation"
+        app:layout_constraintEnd_toStartOf="@+id/etStartLocation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etStartLocation" />
+
+    <TextView
+        android:id="@+id/tvTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="To"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etEndLocation"
+        app:layout_constraintEnd_toStartOf="@+id/etEndLocation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etEndLocation" />
+
+    <TextView
+        android:id="@+id/tvAtFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="at"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etStartLocation"
+        app:layout_constraintEnd_toStartOf="@+id/etDepartureTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etStartLocation"
+        app:layout_constraintTop_toTopOf="@+id/etStartLocation" />
+
+    <TextView
+        android:id="@+id/tvAtTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="at"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etEndLocation"
+        app:layout_constraintEnd_toStartOf="@+id/etArrivalTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etEndLocation"
+        app:layout_constraintTop_toTopOf="@+id/etEndLocation" />
+
+    <RadioGroup
+        android:id="@+id/rgDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:checkedButton="@+id/rbTransit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEndLocation">
+
+        <RadioButton
+            android:id="@+id/rbDriving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="driving"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rbWalking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="walking"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rbBicycling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="bicycling"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rbTransit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="4dp"
+            android:text="transit"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

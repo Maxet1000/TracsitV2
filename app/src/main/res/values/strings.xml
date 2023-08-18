@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">tracsitV2</string>
+    <string name="side_menu_open">Open</string>
+    <string name="side_menu_close">Open</string>
+    <string name="commuteTimeExplanation">Estimated commute time: %1$d min</string>
+</resources>
